@@ -265,7 +265,6 @@ public class SwipeItem extends ViewGroup {
     }
 
     protected void setSwipeState(SwipeState state) {
-      setUndoText(mConfiguration.getRightUndoButtonText());
         mState = state;
         switch (mState) {
             case LEFT_UNDO:
@@ -465,6 +464,7 @@ public class SwipeItem extends ViewGroup {
     }
 
     private void handleRightSwipe() { 
+        setUndoText(mConfiguration.getRightUndoButtonText());
         if (mConfiguration.isRightUndoable()) {
             mState = SwipeState.RIGHT_UNDO;
             setSwipeUndoDescription(mConfiguration.getRightUndoDescription());
