@@ -464,7 +464,8 @@ public class SwipeItem extends ViewGroup {
         }
     }
 
-    private void handleRightSwipe() { 
+    private void handleRightSwipe() {
+        System.out.println(";[plokijuytcdxsdcfvgbhnmk]");
         if (mConfiguration.isRightUndoable()) {
             mState = SwipeState.RIGHT_UNDO;
             setSwipeUndoDescription(mConfiguration.getRightUndoDescription());
