@@ -181,6 +181,7 @@ public class SwipeConfiguration {
     }
 
     void setRightUndoButtonText(CharSequence text) {
+        System.out.println("akiiiiiiiiiiiii: "+text);
         mRightUndoButtonText = text;
     }
 
