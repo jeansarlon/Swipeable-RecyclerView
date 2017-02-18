@@ -255,6 +255,10 @@ public class SwipeItem extends ViewGroup {
         ((TextView) findViewById(R.id.undoButton)).setTextColor(resolvedTextColor);
     }
 
+    public void setUndoText(CharSequence text) {
+        ((TextView) findViewById(R.id.undoButton)).setText(text);
+    }
+
     public void setSwipeConfiguration(SwipeConfiguration configuration) {
         mConfiguration = configuration;
         // TODO: handle configuration here if equal in both directions
@@ -267,12 +271,14 @@ public class SwipeItem extends ViewGroup {
                 setSwipeBackgroundColor(mConfiguration.getLeftBackgroundColor());
                 setSwipeUndoDescription(mConfiguration.getLeftUndoDescription());
                 setSwipeDescriptionTextColor(mConfiguration.getLeftDescriptionTextColor());
+                setUndoText(mConfiguration.getLeftUndoButtonText());
                 findViewById(R.id.undoButton).setOnClickListener(leftUndoClickListener);
                 break;
             case RIGHT_UNDO:
                 setSwipeBackgroundColor(mConfiguration.getRightBackgroundColor());
                 setSwipeUndoDescription(mConfiguration.getRightUndoDescription());
                 setSwipeDescriptionTextColor(mConfiguration.getRightDescriptionTextColor());
+                setUndoText(mConfiguration.getRightUndoButtonText());
                 findViewById(R.id.undoButton).setOnClickListener(rightUndoClickListener);
                 break;
         }
