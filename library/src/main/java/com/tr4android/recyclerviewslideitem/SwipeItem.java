@@ -275,9 +275,6 @@ public class SwipeItem extends ViewGroup {
                 findViewById(R.id.undoButton).setOnClickListener(leftUndoClickListener);
                 break;
             case RIGHT_UNDO:
-                System.out.println("RIGHT_UNDO====================");
-                System.out.println("===>>>" + mConfiguration.getRightUndoButtonText());
-                
                 setSwipeBackgroundColor(mConfiguration.getRightBackgroundColor());
                 setSwipeUndoDescription(mConfiguration.getRightUndoDescription());
                 setSwipeDescriptionTextColor(mConfiguration.getRightDescriptionTextColor());
@@ -469,6 +466,9 @@ public class SwipeItem extends ViewGroup {
     }
 
     private void handleRightSwipe() {
+        System.out.println("RIGHT_UNDO====================");
+        System.out.println("===>>>" + mConfiguration.getRightUndoButtonText());
+        
         if (mConfiguration.isRightUndoable()) {
             mState = SwipeState.RIGHT_UNDO;
             setSwipeUndoDescription(mConfiguration.getRightUndoDescription());
