@@ -265,6 +265,7 @@ public class SwipeItem extends ViewGroup {
     }
 
     protected void setSwipeState(SwipeState state) {
+      System.out.println("CAARALHAAAAAA"+ state);
         mState = state;
         switch (mState) {
             case LEFT_UNDO:
@@ -465,10 +466,7 @@ public class SwipeItem extends ViewGroup {
         }
     }
 
-    private void handleRightSwipe() {
-        System.out.println("RIGHT_UNDO====================");
-        System.out.println("===>>>" + mConfiguration.getRightUndoButtonText());
-        
+    private void handleRightSwipe() { 
         if (mConfiguration.isRightUndoable()) {
             mState = SwipeState.RIGHT_UNDO;
             setSwipeUndoDescription(mConfiguration.getRightUndoDescription());
